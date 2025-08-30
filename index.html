@@ -3,10 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Assignment-5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    .font-poppins {
+  font-family: "Poppins", sans-serif;
 
-    
+}
+.bg-common{
+    background-color: #E3E9FA;
+}
+</style>
+</head>
+<body class="bg-[#dde1e8] font-poppins">
+<!-- NAV BAR SECTION -->
+    <header class="py-4">
+        <nav class=" md:container md:mx-auto  px-6 bg-white flex justify-between items-center rounded-2xl py-4 ">
+           <div class="flex gap-3 items-center"><img src="Dev-Board/assets/logo.png" alt="" title="DevBoard">
+            <p class="text-3xl hidden sm:inline">Dev<span class="font-bold">Board</p>
+                </div> 
+                <div class="flex justify-center items-center gap-6">
+                    <div class="bg-[#eef0f4] rounded-4xl px-6 py-2 flex gap-2 items-center">
+                        <img src="Dev-Board/assets/checkbox.png" alt="">
+                        <p id="check" class="font-bold text-2xl">25</p>
+                    </div>
+                    <!-- DYNAMIC BUTTON -->
+                    <div>
+                        <button id="dynamic-btn"><img src="Dev-Board/assets/theme-btn.png" alt="" class="bg-[#eef0f4] p-3 rounded-full"></button>
+                    </div>
+                </div>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main class="py-2">
+        <!-- SECTION OF TWO DIVS -->
+<section class=" md:container md:mx-auto  grid grid-cols-1 md:grid-cols-[80%_20%]  gap-3  py-5 rounded-2xl ">
+    <!-- FIRST DIV -->
+<div class="bg-white rounded-2xl p-5">
+    <!-- 3 BOXES OF 1ST DIV -->
+    <diV class="mb-5 flex flex-col md:flex-row gap-3">
+        <div class="flex gap-3 justify-center items-center px-2 py-3 bg-common rounded-2xl">
+            <img src="Dev-Board/assets/checkbox.png" alt="" class="bg-white p-3 rounded-full">
+            <div class="flex-col justify-center">
+                <p class="text-lg"><span class="text-[#3752FD] font-semibold">T</span>ask Assigned</p>
+                <p id="addedTask" class="font-bold text-2xl">06</p>
+            </div>
+        </div>
+        <div id="board" class="flex-1 bg-[linear-gradient(to_right,_#3752FD,_#6C7FFA,_#9BA8F8)] text-white px-12 py-5 flex gap-2 justify-center lg:justify-start items-center  rounded-2xl">
+            <img src="Dev-Board/assets/board.png" alt="">
+            <p class="text-2xl">Discover Something <br>New Today!</p>
+        </div>
+        <div class="bg-common flex justify-center items-center gap-4 p-5 rounded-2xl">
+            <img src="Dev-Board/assets/calender.png" alt="">
+            <p id="date"></p>
+        </div>
+    </diV>
+    <hr class="text-gray-200">
+    <!-- 6 BOXES (TASKS) 1ST DIV -->
+    <diV class="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<div class="rounded-2xl bg-common flex-col px-4 py-4">
+    <div><span class="text-lg bg-white p-3 rounded-2xl">ShopEase</span>
+    <h1 id="task-1" class="title font-bold text-xl mb-5 mt-8">Fix Mobile Button Issue </h1>
+<p class="mb-8 h-28 line-clamp-4 bg-white rounded-2xl p-3 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+and ensure onClick works properly
+</p></div>
+    <div class="flex justify-between"><p class="font-bold text-lg"><span class="text-gray-400">Deadline</span><br>
+    21 March 2025</p>
+<button id="complete-1" class="task px-3 py-1 rounded-lg bg-[#3752FD]  text-white text-lg ">Completed
+
+</button></div>
+</div>
+<div class="rounded-2xl bg-common flex-col px-4 py-4">
+    <div><span class="text-lg bg-white p-3 rounded-2xl">CloudSync</span>
+    <h1 id="task-2" class="title font-bold text-xl text-4xl mb-5 mt-8">Add Dark Mode</h1>
+<p class="mb-8 h-28 line-clamp-4 bg-white rounded-2xl p-3 text-gray-400">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+</p></div>
+    <div class="flex justify-between"><p class="font-bold text-lg"><span class="text-gray-400">Deadline</span><br>
+    25 March 2025</p>
+<button id="complete-2" class=" task px-3 py-1 rounded-lg bg-[#3752FD]  text-white text-lg ">Completed
+
+</button></div>
+</div>
+<div class="rounded-2xl bg-common flex-col px-4 py-4">
+    <div><span class="text-lg bg-white p-3 rounded-2xl">Swiftpay</span>
+    <h1 id="task-3" class="title font-bold text-xl mb-5 mt-8">Optimized Home Page</h1>
+<p class="mb-8 h-28 line-clamp-4 bg-white rounded-2xl p-3 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+and ensure onClick works properly
+</p></div>
+    <div class="flex justify-between"><p class="font-bold text-lg"><span class="text-gray-400">Deadline</span><br>
+    28 March 2025</p>
+<button id="complete-3" class="task px-3 py-1 rounded-lg bg-[#3752FD]  text-white text-lg ">Completed
+
+</button></div>
+</div>
+<div class="rounded-2xl bg-common flex-col px-4 py-4">
+    <div><span class="text-lg bg-white p-3 rounded-2xl">Meta</span>
+    <h1 id="task-4" class="title font-bold text-xl mb-5 mt-8">Add New Emoji &#129330;</h1>
+<p class="mb-8 h-28 line-clamp-4 bg-white rounded-2xl p-3 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+and ensure onClick works properly
+</p></div>
+    <div class="flex justify-between"><p class="font-bold text-lg"><span class="text-gray-400">Deadline</span><br>
+    31 March 2025</p>
+<button id="complete-4" class="task px-3 py-1 rounded-lg bg-[#3752FD]  text-white text-lg ">Completed
+
+</button></div>
+</div>
+<div class="rounded-2xl bg-common flex-col px-4 py-4">
+    <div><span class="text-lg bg-white p-3 rounded-2xl">Google LLc</span>
+    <h1 id="task-5" class="title font-bold text-xl mb-5 mt-8">Integrate Open AI API</h1>
+<p class="mb-8 h-28 line-clamp-4 bg-white rounded-2xl p-3 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+and ensure onClick works properly
+</p></div>
+    <div class="flex justify-between"><p class="font-bold text-lg"><span class="text-gray-400">Deadline</span><br>
+    2 April 2025</p>
+<button id="complete-5" class="task px-3 py-1 rounded-lg bg-[#3752FD]  text-white text-lg ">Completed
+
+</button></div>
+</div>
+<div class="rounded-2xl bg-common flex-col px-4 py-4">
+    <div><span class="text-lg bg-white p-3 rounded-2xl">Glassdoar</span>
+    <h1 id="task-6" class="title font-bold text-xl mb-5 mt-8">Improve Job Searching</h1>
+<p class="mb-8 h-28 line-clamp-4 bg-white rounded-2xl p-3 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+and ensure onClick works properly
+</p></div>
+    <div class="flex justify-between"><p class="font-bold text-lg"><span class="text-gray-400">Deadline</span><br>
+    10 April 2025</p>
+<button id="complete-6" class="task px-3 py-1 rounded-lg bg-[#3752FD]  text-white text-lg ">Completed
+
+</button></div>
+</div>
+    </diV>
+</div>
+<!-- SECOND DIV -->
+<div class="bg-white p-5 rounded-2xl md:w-[calc(100%-12px)]">
+ <div class="flex-col justify-center mt-5 mb-4 ">
+        <div class="flex justify-center items-center gap-2 mb-5">
+        <img src="Dev-Board/assets/activity.png" alt="">
+        <p class="font-semibold">Activity Log</p>
+    </div>
+   <div class="text-center">
+     <button id="clearHistory" class="bg-[#3752FD] text-white rounded-lg px-4 py-2">Clear History</button>
+   </div>
+    </div>
+    <hr class="text-gray-300">
+    <div id="history"></div>
+</div> 
+</section>
+    </main>
+    <!-- JS FILES -->
+  <script src="/script/rediect.js"></script>
+  <script src="script/dynamic-btn.js"></script>
+  <script src="script/setdate.js"></script>
+  <script src="script/clear.js"></script>
+  <script src="script/task.js"></script>
+ 
 </body>
 </html>
