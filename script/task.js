@@ -2,6 +2,7 @@ const task = document.getElementsByClassName("task");
 let clickCount = 0;
 for (let i = 0; i < task.length; i++) {
   task[i].addEventListener("click", function () {
+    
     clickCount++;
     alert("Board Updated Successfully");
 
@@ -19,6 +20,11 @@ for (let i = 0; i < task.length; i++) {
     p.innerText = `You have completed the task ${title} at ${new Date().toLocaleTimeString()}`;
     p.className = "bg-common rounded-lg text-gray-700 mt-3 p-3";
     history.appendChild(p);
+    show_again();
+
+    document.getElementById('clearHistory').addEventListener('click', function() {
+  document.getElementById('history').style.display = 'none';
+});
     
   });
 }
@@ -31,4 +37,9 @@ function add_AND_sub() {
   const valueAfterAdd = convertedValue2 + 1;
   document.getElementById("check").innerText = valueAfterAdd;
   document.getElementById("addedTask").innerText = "0" + valueAfterSub;
+}
+function show_again() {
+     
+  document.getElementById('history').style.display = 'block';
+
 }
