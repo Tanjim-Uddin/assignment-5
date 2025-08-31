@@ -20,7 +20,7 @@ for (let i = 0; i < task.length; i++) {
     p.innerText = `You have completed the task ${title} at ${new Date().toLocaleTimeString()}`;
     p.className = "remove bg-common rounded-lg text-gray-700 mt-3 p-3";
     history.appendChild(p);
-    // show_again();
+ 
 
     document.getElementById('clearHistory').addEventListener('click', function() {
           const remove= document.querySelectorAll('.remove');
