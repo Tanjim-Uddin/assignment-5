@@ -18,12 +18,16 @@ for (let i = 0; i < task.length; i++) {
     const title = task_title[i].innerText;
     const p = document.createElement("p");
     p.innerText = `You have completed the task ${title} at ${new Date().toLocaleTimeString()}`;
-    p.className = "bg-common rounded-lg text-gray-700 mt-3 p-3";
+    p.className = "remove bg-common rounded-lg text-gray-700 mt-3 p-3";
     history.appendChild(p);
-    show_again();
+    // show_again();
 
     document.getElementById('clearHistory').addEventListener('click', function() {
-  document.getElementById('history').style.display = 'none';
+          const remove= document.querySelectorAll('.remove');
+
+ for (let i = 0; i <remove.length; i++) {
+     remove[i].remove();
+    }
 });
     
   });
@@ -37,9 +41,4 @@ function add_AND_sub() {
   const valueAfterAdd = convertedValue2 + 1;
   document.getElementById("check").innerText = valueAfterAdd;
   document.getElementById("addedTask").innerText = "0" + valueAfterSub;
-}
-function show_again() {
-     
-  document.getElementById('history').style.display = 'block';
-
 }
